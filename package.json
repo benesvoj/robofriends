@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://benesvoj.github.io/robofriends",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -24,7 +25,9 @@
     "react": "^18.1.0",
     "react-dev-utils": ">=11.0.4",
     "react-dom": "^18.1.0",
+    "react-redux": "^8.0.2",
     "react-scripts": "^5.0.1",
+    "redux": "^4.2.0",
     "serialize-javascript": ">=3.1.0",
     "sockjs": ">=0.3.20",
     "ssri": ">=6.0.2",

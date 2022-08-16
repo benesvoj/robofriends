@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
 // componenets
 import CardList from "../components/CardList";
 import SearchBox from '../components/SearchBox';
@@ -6,6 +7,17 @@ import Scroll from '../components/Scroll';
 import ErrorBoundry from "../components/ErrorBoundry";
 // css
 import './App.css';
+
+import {setSearchField} from '../actions';
+
+const mapStateToProps = state => {
+    return {
+        searchField: state.searchField
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {onSearchChange: (event) => dispatch(setSearchField(event.target.value))}
+}
 
 function App() {
 
@@ -46,4 +58,4 @@ function App() {
         );
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
